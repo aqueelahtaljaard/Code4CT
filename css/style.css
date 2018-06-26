@@ -1,0 +1,354 @@
+body {
+  display: grid;
+  grid-template-areas: "nav nav nav nav" "slideshow slideshow slideshow slideshow" "about about about1 about2" "about about about3 about4" "icon1 icon2 icon3 icon4" "portfolio portfolio portfolio portfolio" "team team team team" "numbers numbers numbers numbers" "carasal carasal carasal carasal" "footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0;
+  font-size: 20px; }
+
+nav {
+  z-index: 2;
+  background-color: white;
+  grid-area: nav;
+  top: 0;
+  position: sticky;
+  margin: 50px 0px 20px 0px; }
+  nav a:not(:first-child) {
+    margin-left: 200px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: inline-block;
+    transition: 0.3s; }
+  nav a:hover {
+    color: #f9acac; }
+
+.icon {
+  display: none; }
+
+.myMenu {
+  transition: 0.3s;
+  overflow: hidden;
+  width: 100%; }
+
+#slideshow {
+  grid-area: slideshow; }
+
+#slide {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  color: white;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+  margin: -650px 200px 120px 390px;
+  width: 45vw;
+  height: 400px; }
+  #slide button {
+    background-color: #f9acac;
+    margin-top: 500px;
+    width: 150px;
+    height: 50px; }
+
+#slideWords {
+  grid-area: slideWords;
+  position: absolute;
+  display: block;
+  color: white;
+  text-align: center;
+  margin: 0px 0px 0px 90px;
+  width: 40vw;
+  height: 250px;
+  font-size: 30px; }
+
+#about {
+  grid-area: about;
+  width: 550px;
+  margin: 60px 20px 10px 100px;
+  text-align: center; }
+
+#about1 {
+  grid-area: about1; }
+
+#about2 {
+  grid-area: about2; }
+
+#about3 {
+  grid-area: about3; }
+
+#about4 {
+  grid-area: about4; }
+
+#about1 img, #about2 img, #about3 img, #about4 img {
+  width: 350px;
+  height: 200px;
+  float: left; }
+
+#about1, #about2 {
+  margin-top: 60px;
+  margin-bottom: 20px; }
+
+#about3, #about4 {
+  margin-bottom: 100px; }
+
+#about1, #about3 {
+  margin-left: 20px; }
+
+#about2, #about4 {
+  margin-right: 150px; }
+
+#icon1 {
+  grid-area: icon1; }
+
+#icon2 {
+  grid-area: icon2; }
+
+#icon3 {
+  grid-area: icon3; }
+
+#icon4 {
+  grid-area: icon4; }
+
+#icon1, #icon2, #icon3, #icon4 {
+  width: 350px;
+  display: inline-block;
+  text-align: center; }
+  #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+    width: 100px;
+    height: 80px; }
+
+#portfolio {
+  grid-area: portfolio; }
+
+#team {
+  grid-area: team; }
+
+#numbers {
+  grid-area: numbers; }
+
+#carasal {
+  grid-area: carasal; }
+
+footer {
+  grid-area: footer; }
+
+@media screen and (max-width: 1024px) {
+  .myMenu a:not(:first-child) {
+    display: none;
+    padding: 8px 8px 8px 15px; }
+
+  .myMenu a:first-child {
+    position: relative;
+    padding: 10px 0px 0px 15px; }
+
+  .myMenu a .icon {
+    display: block;
+    float: none; }
+
+  .myMenu .icon {
+    display: none; }
+
+  .myMenu.responsive {
+    position: relative; }
+
+  .myMenu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .myMenu.responsive a:not(:first-child) {
+    float: none;
+    display: block;
+    text-align: center;
+    padding-left: 60px; } }
+@media screen and (max-width: 768px) {
+  .myMenu a:not(:first-child) {
+    display: none;
+    padding: 8px 8px 8px 15px; }
+
+  .myMenu a:first-child {
+    position: relative;
+    padding: 10px 0px 0px 15px; }
+
+  .myMenu a .icon {
+    display: block;
+    float: none; }
+
+  .myMenu .icon {
+    display: none; }
+
+  .myMenu.responsive {
+    position: relative; }
+
+  .myMenu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .myMenu.responsive a:not(:first-child) {
+    float: none;
+    display: block;
+    text-align: center;
+    padding-left: 60px; }
+
+  #slide {
+    margin: -650px 200px 120px 95px;
+    width: 190vw;
+    height: 500px; }
+
+  #slideWords {
+    margin: 0px 0px 0px 90px;
+    width: 150vw;
+    height: 250px;
+    font-size: 30px; }
+
+  #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+    width: 100px;
+    height: 80px; } }
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 10px;
+    grid-template-areas: "nav" "slideshow" "about" "icon1" "icon2" "icon3" "icon4" "portfolio" "team" "numbers" "carasal" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; }
+
+  .myMenu a:not(:first-child) {
+    display: none;
+    padding: 8px 8px 8px 15px; }
+
+  .myMenu a:first-child {
+    position: relative;
+    padding: 10px 0px 0px 15px; }
+
+  .myMenu a .icon {
+    display: block;
+    float: none; }
+
+  .icon {
+    display: block;
+    position: absolute;
+    padding: 15px 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px; }
+
+  .myMenu.responsive {
+    position: relative; }
+
+  .myMenu.responsive.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .myMenu.responsive a:not(:first-child) {
+    float: none;
+    display: block;
+    text-align: center;
+    padding-left: 60px; }
+
+  #slide {
+    margin: -240px 200px 120px 25px;
+    width: 85vw;
+    height: 230px; }
+
+  #slideWords {
+    font-size: 14px;
+    margin: 0px 0px 120px 0px;
+    width: 85vw;
+    height: 150px; }
+
+  #image img {
+    width: 425px;
+    height: 250px; }
+
+  #icon1, #icon2, #icon3, #icon4 {
+    text-align: center;
+    margin: 20px 20px 20px 20px; }
+    #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+      width: 100px;
+      height: 80px;
+      padding-top: 50px; } }
+@media screen and (max-width: 375px) {
+  .myMenu {
+    width: 375px; }
+
+  #slide {
+    margin: -240px 200px 120px 35px;
+    width: 85vw;
+    height: 230px; }
+
+  #slideWords {
+    font-size: 14px;
+    margin: 0px 0px 120px 0px;
+    width: 85vw;
+    height: 150px; }
+
+  #image img {
+    width: 375px; }
+
+  #icon1, #icon2, #icon3, #icon4 {
+    margin: 20px 20px 20px 20px; }
+    #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+      width: 100px;
+      height: 80px;
+      padding-top: 50px; } }
+@media screen and (max-width: 320px) {
+  .myMenu a:not(:first-child) {
+    display: none;
+    padding: 8px 8px 8px 15px; }
+
+  .myMenu a:first-child {
+    position: relative;
+    padding: 10px 0px 0px 15px; }
+
+  .myMenu a .icon {
+    display: block;
+    float: none; }
+
+  .icon {
+    display: block;
+    position: absolute;
+    padding: 15px 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px; }
+
+  .myMenu.responsive {
+    position: relative; }
+
+  .myMenu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .myMenu.responsive a:not(:first-child) {
+    float: none;
+    display: block;
+    text-align: center;
+    padding-left: 60px; }
+
+  #slide {
+    margin: -240px 200px 120px 25px;
+    width: 85vw;
+    height: 230px; }
+
+  #slideWords {
+    font-size: 14px;
+    margin: 0px 0px 120px 0px;
+    width: 85vw;
+    height: 150px; }
+
+  #image img {
+    width: 327px;
+    height: 250px; }
+
+  #icon1, #icon2, #icon3, #icon4 {
+    text-align: center;
+    margin: 20px 20px 20px 20px; }
+    #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+      width: 100px;
+      height: 80px;
+      padding-top: 50px; } }
+
+/*# sourceMappingURL=style.css.map */
