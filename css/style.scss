@@ -8,9 +8,11 @@ body{
   "about about about3 about4"
   "icon1 icon2 icon3 icon4"
   "portfolio portfolio portfolio portfolio"
+  "portfolio1 portfolio2 portfolio5 portfolio5"
+  "portfolio3 portfolio4 portfolio5 portfolio5"
   "team team team team"
   "numbers numbers numbers numbers"
-  "carasal carasal carasal carasal"
+  "carousel carousel carousel carousel"
   "footer footer footer footer";
   ;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -97,7 +99,10 @@ nav{
   grid-area: about;
   width: 550px;
   margin: 60px 20px 10px 100px;
-  text-align: center;
+  text-align: justify;
+    h1{
+      text-align: center;
+    }
 }
 
 #about1{
@@ -126,20 +131,29 @@ nav{
   }
 
 #about1,#about2{
-  margin-top: 60px;
-  margin-bottom: 20px;
+
+  img{
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
 }
 
 #about3,#about4{
-  margin-bottom: 100px;
+  img{
+    margin-bottom: 100px;
+  }
 }
 
 #about1,#about3{
-  margin-left: 20px;
+  img{
+    margin-left: 20px;
+  }
 }
 
 #about2,#about4{
-  margin-right: 150px;
+  img{
+    margin-right: 150px;
+  }
 }
 
 // #about01{
@@ -168,20 +182,64 @@ nav{
 }
 
 #icon1, #icon2, #icon3, #icon4{
-  width: 350px;
+  // width: 350px;
   display: inline-block;
   // float: left;
-  text-align: center;
+  text-align:left;
   img{
+    margin: 0 auto;
     width: 100px;
     height: 80px;
+  }
+  h3{
+    text-align: center;
   }
 }
 
 // STYLE FOR PORTFOLIO
 #portfolio{
   grid-area: portfolio;
+  width: 1000px;
+  margin-left: 20px;
 }
+#portfolio1{
+  grid-area: portfolio1;
+}
+#portfolio2{
+  grid-area: portfolio2;
+}
+#portfolio3{
+  grid-area: portfolio3;
+}
+#portfolio4{
+  grid-area: portfolio4;
+}
+#portfolio5{
+  grid-area: portfolio5;
+
+  // margin-left: 10px;
+  img{
+    width: 400px;
+    height: 510px;
+  }
+}
+
+#portfolio1, #portfolio2, #portfolio3,#portfolio4{
+  // margin-left: 200px;
+  img{
+    // margin-left: 200px;
+    width: 400px;
+    height: 250px;
+  }
+}
+
+#portfolio2, #portfolio4{
+// margin-left: 10px;
+}
+
+
+
+
 // STYLE FOR TEAM
 #team{
   grid-area: team;
@@ -190,10 +248,77 @@ nav{
 #numbers{
   grid-area: numbers;
 }
-// STYLE FOR carasal
-#carasal{
-  grid-area: carasal;
-}
+// STYLE FOR carousel
+// #carousel{
+//   grid-area: carousel;
+// }
+//
+// #carousel_inner {
+//     float: left;
+//     width: 630px;
+//     overflow: hidden;
+//     background: #F0F0F0;
+// }
+//
+// #carousel_ul li img {
+//     width: 200px;
+//     height: 110px;
+// }
+//
+// #carousel_ul {
+//     position: relative;
+//     left: -210px;
+//     list-style-type: none;
+//     margin: 0px;
+//     padding: 0px;
+//     width: 9999px;
+//     padding-bottom: 10px;
+// }
+//
+// #carousel_ul li {
+//     float: left;
+//     width: 200px;
+//     padding: 0px;
+//     height: 110px;
+//     background: #000000;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//     margin-left: 5px;
+//     margin-right: 5px;
+// }
+//
+// #carousel_ul li img {
+//     margin-bottom: -4px;
+//     cursor: pointer;
+//     cursor: hand;
+//     border: 0px;
+// }
+//
+// #left_scroll, #right_scroll {
+//     float: left;
+//     height: 130px;
+//     width: 35px;
+//     margin-top: 50px;
+//     margin-left: 20px;
+// }
+//
+// #left_scroll img, #right_scroll img {
+//     border: 0;
+//  /* remove the default border of linked image */
+// /*styling*/
+//     cursor: pointer;
+//     cursor: hand;
+// }
+//
+// #left_scroll img {
+//     width: 25px;
+//     height: 25px;
+// }
+//
+// #right_scroll img {
+//     width: 25px;
+//     height: 25px;
+// }
 // STYLE FOR FOOTER
 footer{
   grid-area: footer;

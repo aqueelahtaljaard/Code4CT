@@ -1,6 +1,6 @@
 body {
   display: grid;
-  grid-template-areas: "nav nav nav nav" "slideshow slideshow slideshow slideshow" "about about about1 about2" "about about about3 about4" "icon1 icon2 icon3 icon4" "portfolio portfolio portfolio portfolio" "team team team team" "numbers numbers numbers numbers" "carasal carasal carasal carasal" "footer footer footer footer";
+  grid-template-areas: "nav nav nav nav" "slideshow slideshow slideshow slideshow" "about about about1 about2" "about about about3 about4" "icon1 icon2 icon3 icon4" "portfolio portfolio portfolio portfolio" "portfolio1 portfolio2 portfolio5 portfolio5" "portfolio3 portfolio4 portfolio5 portfolio5" "team team team team" "numbers numbers numbers numbers" "carousel carousel carousel carousel" "footer footer footer footer";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0;
   font-size: 20px; }
@@ -66,7 +66,9 @@ nav {
   grid-area: about;
   width: 550px;
   margin: 60px 20px 10px 100px;
-  text-align: center; }
+  text-align: justify; }
+  #about h1 {
+    text-align: center; }
 
 #about1 {
   grid-area: about1; }
@@ -85,17 +87,17 @@ nav {
   height: 200px;
   float: left; }
 
-#about1, #about2 {
+#about1 img, #about2 img {
   margin-top: 60px;
   margin-bottom: 20px; }
 
-#about3, #about4 {
+#about3 img, #about4 img {
   margin-bottom: 100px; }
 
-#about1, #about3 {
+#about1 img, #about3 img {
   margin-left: 20px; }
 
-#about2, #about4 {
+#about2 img, #about4 img {
   margin-right: 150px; }
 
 #icon1 {
@@ -111,24 +113,47 @@ nav {
   grid-area: icon4; }
 
 #icon1, #icon2, #icon3, #icon4 {
-  width: 350px;
   display: inline-block;
-  text-align: center; }
+  text-align: left; }
   #icon1 img, #icon2 img, #icon3 img, #icon4 img {
+    margin: 0 auto;
     width: 100px;
     height: 80px; }
+  #icon1 h3, #icon2 h3, #icon3 h3, #icon4 h3 {
+    text-align: center; }
 
 #portfolio {
-  grid-area: portfolio; }
+  grid-area: portfolio;
+  width: 1000px;
+  margin-left: 20px; }
+
+#portfolio1 {
+  grid-area: portfolio1; }
+
+#portfolio2 {
+  grid-area: portfolio2; }
+
+#portfolio3 {
+  grid-area: portfolio3; }
+
+#portfolio4 {
+  grid-area: portfolio4; }
+
+#portfolio5 {
+  grid-area: portfolio5; }
+  #portfolio5 img {
+    width: 400px;
+    height: 510px; }
+
+#portfolio1 img, #portfolio2 img, #portfolio3 img, #portfolio4 img {
+  width: 400px;
+  height: 250px; }
 
 #team {
   grid-area: team; }
 
 #numbers {
   grid-area: numbers; }
-
-#carasal {
-  grid-area: carasal; }
 
 footer {
   grid-area: footer; }

@@ -66,12 +66,12 @@
         <p>
           Code for Cape Town (Code4CT) is a programme that introduces young girls to basic web building skills and exposes them to opportunities in the Information and Communication Technologies (ICT) sector. Participants are trained in web development, design principles, as well as courses in professional development. Code4CT aims to inspire a generation of young girls who are well-prepared with a toolkit of technical and soft skills in order to achieve high impact in the workplace.
         </p>
+        <button type="button" name="button">READ MORE</button>
       </div>
         <div id="about1"><img src="images/img1-about.jpg"></div>
         <div id="about2"><img src="images/img2-about.jpg"></div>
         <div id="about3"><img src="images/img3-about.jpg"></div>
         <div id="about4"><img src="images/img4-about.jpg"></div>
-      </div>
 
       <div id="icon1"><img src="images/coding.png">
         <h3>Coding</h3>
@@ -102,15 +102,57 @@
       </div>
 
       <div id="portfolio">
-
-
+        <h3>Our Awesome Portfolio</h3>
+        <p>
+          Over the past 3 years, Code for Cape Town has reached over 600 young women with coding and social innovation. Not only have they been exposed to coding but they have also done careers and life skills courses, design thinking workshops and social innovation projects to address local challenges.
+        </p>
+        <p>
+          Out of the 50 learners who joined our programme in 2014 and 2015 and have now left school, 40 are pursuing further studies or skills development.
+        </p>
       </div>
+      <div id="portfolio1"><img src="images/img1-portfolio.jpg"></div>
+      <div id="portfolio2"><img src="images/img2-portfolio.jpg"></div>
+      <div id="portfolio3"><img src="images/img3-portfolio.jpg"></div>
+      <div id="portfolio4"><img src="images/img4-portfolio.jpg"></div>
+      <div id="portfolio5"><img src="images/img5-portfolio.jpg"></div>
+
       <div id="team"></div>
       <div id="numbers"></div>
-      <div id="carasal"></div>
+      <div id="carousel">
+        <div id="carousel_inner">
+            <ul id="carousel_ul">
+              <li>
+                <a href='#'>
+                  <img src="images/logo1-Deloitte.png"/>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <img src="images/logo2-amazon.png"/>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <img src="images/logo3-csg.png"/>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <img src="images/logo4-DGMT.png"/>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <img src="images/logo5-openbox.png"/>
+                </a>
+              </li>
+            </ul>
+        </div>
+    </div>
+      </div>
 
       <footer></footer>
-
+      <!-- slideshow -->
       <script type="text/javascript">
       function myFunction() {
         var x = document.getElementById("menu");
@@ -121,6 +163,102 @@
       }
       }
 
+//       $(document).ready(function() {
+//
+//        //options( 1 - ON , 0 - OFF)
+//        var auto_slide = 1;
+//        var hover_pause = 1;
+//        var key_slide = 1;
+//
+//        //speed of auto slide(
+//        var auto_slide_seconds = 0;
+//        /* IMPORTANT: i know the variable is called ...seconds but it's
+//        in milliseconds ( multiplied with 1000) '*/
+//
+//        /*move the last list item before the first item. The purpose of this is
+//        if the user clicks to slide left he will be able to see the last item.*/
+//        $('#carousel_ul li:first').before($('#carousel_ul li:last'));
+//
+//        //check if auto sliding is enabled
+//        if(auto_slide == 1){
+//            /*set the interval (loop) to call function slide with option 'right'
+//            and set the interval time to the variable we declared previously */
+//            var timer = setInterval('slide("right")', auto_slide_seconds);
+//
+//            /*and change the value of our hidden field that hold info about
+//            the interval, setting it to the number of milliseconds we declared previously*/
+//            $('#hidden_auto_slide_seconds').val(auto_slide_seconds);
+//        }
+//
+//        //check if hover pause is enabled
+//        if(hover_pause == 1){
+//            //when hovered over the list
+//            $('#carousel_ul').hover(function(){
+//                //stop the interval
+//                clearInterval(timer)
+//            },function(){
+//                //and when mouseout start it again
+//                timer = setInterval('slide("right")', auto_slide_seconds);
+//            });
+//
+//        }
+//
+//        //check if key sliding is enabled
+//        if(key_slide == 1){
+//
+//            //binding keypress function
+//            $(document).bind('keypress', function(e) {
+//                //keyCode for left arrow is 37 and for right it's 39 '
+//                if(e.keyCode==37){
+//                        //initialize the slide to left function
+//                        slide('left');
+//                }else if(e.keyCode==39){
+//                        //initialize the slide to right function
+//                        slide('right');
+//                }
+//            });
+//
+//        }
+//
+//  });
+//
+// //FUNCTIONS BELLOW
+//
+// //slide function
+// function slide(where){
+//
+//            //get the item width
+//            var item_width = $('#carousel_ul li').outerWidth() + 10;
+//
+//            /* using a if statement and the where variable check
+//            we will check where the user wants to slide (left or right)*/
+//            if(where == 'left'){
+//                //...calculating the new left indent of the unordered list (ul) for left sliding
+//                var left_indent = parseInt($('#carousel_ul').css('left')) + item_width;
+//            }else{
+//                //...calculating the new left indent of the unordered list (ul) for right sliding
+//                var left_indent = parseInt($('#carousel_ul').css('left')) - item_width;
+//
+//            }
+//
+//            //make the sliding effect using jQuery's animate function... '
+//            $('#carousel_ul:not(:animated)').animate({'left' : left_indent},3000,function(){
+//
+//                /* when the animation finishes use the if statement again, and make an ilussion
+//                of infinity by changing place of last or first item*/
+//                if(where == 'left'){
+//                    //...and if it slided to left we put the last item before the first item
+//                    $('#carousel_ul li:first').before($('#carousel_ul li:last'));
+//                }else{
+//                    //...and if it slided to right we put the first item after the last item
+//                    $('#carousel_ul li:last').after($('#carousel_ul li:first'));
+//                }
+//
+//                //...and then just get back the default left indent
+//                $('#carousel_ul').css({'left' : '-210px'});
+//            });
+//
+// }
  </script>
   </body>
 </html>
