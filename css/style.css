@@ -1,8 +1,9 @@
+@charset "UTF-8";
 body {
   display: grid;
-  grid-template-areas: "nav nav nav nav " "slideshow slideshow slideshow slideshow " "about about about1 about2 " "about about about3 about4" "icon1 icon2 icon3 icon4" "portfolio portfolio portfolio portfolio" "portfolio1 portfolio2 portfolio2 portfolio5" "portfolio3 portfolio4 portfolio4 portfolio5" "team team team team" "team1 teamInfo1 team2 teamInfo2" "team3 teamInfo3 team4 teamInfo4" "bar1 bar2 bar3 bar4" "subscribe subscribe subscribe subscribe" "carousel carousel carousel carousel" "footer footer footer footer";
+  grid-template-areas: "nav nav nav nav " "block block block block" "slideshow slideshow slideshow slideshow " "about about about1 about2 " "about about about3 about4" "icon1 icon2 icon3 icon4" "portfolio portfolio portfolio portfolio" "portfolio1 portfolio2 portfolio2 portfolio5" "portfolio3 portfolio4 portfolio4 portfolio5" "team team team team" "team1 teamInfo1 team2 teamInfo2" "team3 teamInfo3 team4 teamInfo4" "cupsCoffee numberGirls projectsDone hoursCoding" "subscribe subscribe subscribe subscribe" "carousel carousel carousel carousel" "footer footer footer footer";
   grid-template-columns: 390px auto auto 400px;
-  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   margin: 0;
   font-size: 20px; }
 
@@ -52,6 +53,47 @@ nav {
   width: 100%; }
   .myMenu #homeIcon {
     margin-top: 20px; }
+
+#block {
+  grid-area: block;
+  font-size: 120%;
+  padding-top: 10%;
+  height: 250px;
+  background: #ebebeb;
+  text-align: center;
+  color: #636363; }
+  #block > h4 > a {
+    color: #f9acac; }
+
+#button {
+  border-radius: 4px;
+  background-color: pink;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  width: 150px;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s; }
+
+#button:after {
+  content: '┬╗';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s; }
+
+#button:hover {
+  width: 160px; }
+
+#button:hover:after {
+  opacity: 1;
+  right: 10px; }
 
 #slideshow {
   grid-area: slideshow; }
@@ -117,7 +159,8 @@ nav {
   margin-bottom: 100px; }
 
 #icon1 {
-  grid-area: icon1; }
+  grid-area: icon1;
+  margin-left: 20px; }
   #icon1 img {
     margin-left: 120px; }
   #icon1 h3 {
@@ -210,23 +253,40 @@ nav {
 #teamInfo4 {
   grid-area: teamInfo4; }
 
-#bar1 {
-  grid-area: bar1; }
+.strip {
+  height: 10px;
+  width: 50px;
+  background-color: #f9acac;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px; }
 
-#bar2 {
-  grid-area: bar2; }
-
-#bar3 {
-  grid-area: bar3; }
-
-#bar4 {
-  grid-area: bar4; }
-
-#bar1, #bar2, #bar3, #bar4 {
-  height: 200px;
+#cupsCoffee {
+  grid-area: cupsCoffee;
   background-color: black;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
+  text-align: center; }
+
+#numberGirls {
+  grid-area: numberGirls;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center; }
+
+#projectsDone {
+  grid-area: projectsDone;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  text-align: center; }
+
+#hoursCoding {
+  grid-area: hoursCoding;
+  background-color: black;
+  color: white;
+  font-size: 25px;
   text-align: center; }
 
 #subscribe {
@@ -234,16 +294,35 @@ nav {
   padding: 20px;
   text-align: center; }
 
+/* Carousel */
+@keyframes carousel {
+  100% {
+    position: relative;
+    left: -400%; } }
+#container {
+  display: block;
+  margin: 0 auto;
+  height: 210px;
+  width: 400%;
+  background-color: black;
+  animation-name: carousel;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  left: 80%; }
+  #container img {
+    display: inline;
+    width: auto;
+    height: 150px;
+    margin-right: 100px; }
+
 #carousel {
   grid-area: carousel;
+  background-color: black;
   width: 100%;
-  background-color: black; }
-  #carousel ul li {
-    list-style: none;
-    display: inline-block; }
-  #carousel ul li img {
-    width: 200px;
-    height: 200px; }
+  overflow: hidden;
+  height: 200px; }
 
 footer {
   grid-area: footer; }
